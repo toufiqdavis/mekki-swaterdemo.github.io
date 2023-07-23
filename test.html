@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Products</title>
+  <style>
+    body,html{
+      overflow-x: hidden;
+    }
+    .product-section {
+      position: relative;
+      width: 100%;
+      padding: 40px 100px;
+    }
+
+    .product-section .product-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+    }
+
+    .product-section .product-title h2 {
+      color: white;
+      font-weight: 500;
+    }
+
+    .product-form {
+      grid-area: form;
+    }
+
+    .product-info {
+      grid-area: info;
+    }
+
+    .product-map {
+      grid-area: map;
+    }
+
+    .product-box {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "form info"
+        "form map";
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product-section .product-card {
+      padding: 10px;
+      background: #fff;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+      width:500px;
+    }
+    .product-form img{
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+    }
+
+      @media (max-width: 991px) {
+      .product-box {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "form"
+          "info"
+          "map";
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<section class="product-section">
+  <div class="product-title">
+    <h2>Our Products</h2>
+  </div>
+  <div class="product-box">
+    <div class="product-card product-form">
+      <img src="assets/images/dispenser.png" alt="">
+      <h3>Dispense Water</h3>
+      <p>Product description for Dispense Water</p>
+    </div>
+    <div class="product-card product-info">
+      <img src="assets/images/sachet.png" alt="">
+      <h3>Sachet Water</h3>
+      <p>Our sachet water, typically a 500ML polythene plastic, is sourced 60 meters deep beneath the Aburi Mountains
+
+      </p>
+    </div>
+    <div class="product-card product-map">
+      <img src="assets/images/bottle.png" alt="">
+      <h3>Bottle Water</h3>
+      <p>Product description for Bottle Water</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
